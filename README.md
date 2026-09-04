@@ -117,4 +117,4 @@ pip install -r requirements.txt
 
 ## Notlar
 
-- Ham veri seti (`.csv`) boyut ve lisans nedeniyle repoya dahil edilmemiştir.
+-Ham veri seti (.csv) boyut ve lisans nedeniyle repoya dahil edilmemiştir — Kaggle üzerinden indirilebilir.
