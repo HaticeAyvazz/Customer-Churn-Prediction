@@ -14,7 +14,7 @@ müşteri segmentasyonu (clustering) ve tahminleri canlı test edebileceğin bir
 6. **En İyi Model Seçimi**
 7. **SHAP Analizi** — global ve tekil müşteri bazında model açıklanabilirliği
 8. **Müşteri Segmentasyonu** — PCA + KMeans/DBSCAN/HDBSCAN ile kümeleme ve küme profilleme
-9. **Streamlit Uygulaması** — churn tahmini + SHAP açıklaması
+9. **Streamlit Uygulaması** — canlı churn tahmini + SHAP açıklaması
 
 ## Veri Ön İşleme Detayları
 
@@ -91,7 +91,8 @@ grafiğiyle bu tahminin gerekçesini gösterir.
 pip install -r requirements.txt
 ```
 
-1. `Telco-Customer-Churn.csv` dosyasını proje kök dizinine ekle (repoya dahil değil).
+1. Veri setini indir ve `Telco-Customer-Churn.csv` adıyla proje kök dizinine ekle (repoya dahil değil):
+   [Telco Customer Churn — Kaggle](https://www.kaggle.com/datasets/blastchar/telco-customer-churn)
 2. Notebook'u baştan sona çalıştır — bu işlem `models/` klasörünü ve tüm `.pkl` artefaktlarını
    üretir:
    ```bash
@@ -106,15 +107,14 @@ pip install -r requirements.txt
 
 ```
 .
-├── prediction.ipynb   # Ana notebook: EDA, modelleme, tuning, SHAP, clustering
-├── app.py              # Streamlit tahmin uygulaması
+├── prediction.ipynb      # Ana notebook: EDA, modelleme, tuning, SHAP, clustering
+├── app.py                # Streamlit tahmin uygulaması
 ├── requirements.txt
-├── .gitignore
-├── models/             # best_model, preprocessor, scaler, encoders, shap_explainer (.pkl)
-├── reports/            # notebook'tan üretilen grafik görselleri
-└── README.md 
+├── models/                # Notebook çalıştırılınca oluşur (best_model, preprocessor, scaler, encoders, shap_explainer)
+├── reports/               # notebook'tan üretilen grafik görselleri buraya kaydedilebilir
+└── README.md
 ```
 
 ## Notlar
 
--Ham veri seti (.csv) boyut ve lisans nedeniyle repoya dahil edilmemiştir — Kaggle üzerinden indirilebilir.
+- Ham veri seti (`.csv`) boyut ve lisans nedeniyle repoya dahil edilmemiştir — [Kaggle üzerinden indirilebilir](https://www.kaggle.com/datasets/blastchar/telco-customer-churn).
